@@ -217,7 +217,7 @@ window.onload = function () {
                 { href: '#', text: 'Форум', class: 'text-info' },
                 { href: 'index.html', text: 'Чат', class: 'text-info' },
                 { href: '#', text: 'Додаткові уроки', class: 'text-info' },
-                { href: 'shop.html', text: 'Магазин', class: 'text-info' },
+                { href: 'store.html', text: 'Магазин', class: 'text-info' },
             ];
 
             navItems.forEach(item => {
