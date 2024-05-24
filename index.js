@@ -214,7 +214,11 @@ window.onload = function () {
                         { href: '#', text: 'Аудіоуроки' },
                     ]
                 },
-                { href: '#', text: 'Форум', class: 'text-info' },
+
+                { href: '#', text: 'Форум', class: 'text-info', dropdown: [
+                    { href: '#', text: 'Звичайний форум' },
+                    { href: 'index.php', text: 'Анонімний форум' },
+                ]},
                 { href: 'index.html', text: 'Чат', class: 'text-info' },
                 { href: '#', text: 'Додаткові уроки', class: 'text-info' },
                 { href: 'store.html', text: 'Магазин', class: 'text-info' },

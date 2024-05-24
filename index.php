@@ -1,16 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>My Website</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+<title>Welcome to my forum | Add your question</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
 
-</head>
+	<style>
 
-<body>
+
+
+.text-end button {
+    color: rgba(255, 95, 0, 255);
+    background-color: white;
+    border: 2px solid rgba(127, 185, 182, 255);
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+}
+
+.text-end #button1 {
+    margin-left: 72px;
+}
+
+.nav {
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.nav li {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.d-flex img {
+    position: absolute;
+    margin-top: 14px;
+    z-index: 1;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+h3{
+	color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.single-question {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+	padding: 10px;
+	width: 50%;
+	margin: 5px;
+	margin-bottom: 20px;
+	background: white;
+    border: 1px solid #ccc; 
+}
+
+.single-question > b > a {
+	color: rgba(255, 95, 0, 255);
+
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#submit{
+	color: rgba(255, 95, 0, 255);
+    background-color: white;
+    border: 2px solid rgba(127, 185, 182, 255);
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-link.dropdown-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+		</style>
 
   <header>
     <header class="p-3 text-white">
@@ -47,7 +119,7 @@
               </div>
             </li>
 
-            <li class="nav-item dropdown">
+             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Форум</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
                 <a class="dropdown-item" href="#">Основний форум</a>
@@ -56,13 +128,13 @@
               </div>
             </li>
 
-            <li><a href="#" class="nav-link px-2 text-info">Чат</a></li>
+            <li><a href="index.html" class="nav-link px-2 text-info">Чат</a></li>
             <li><a href="#" class="nav-link px-2 text-info">Додаткові уроки</a></li>
             <li><a href="store.html" class="nav-link px-2 text-info">Магазин</a></li>
 
           </ul>
 
-          <div class="text-end">
+		  <div class="text-end">
             <a href = "login.html">
               <button type="button" class="btn" id="button1">Логін</button>
             </a>
@@ -70,22 +142,61 @@
             <button type="button" class="btn">Реєстрація</button>
           </a>
           </div>
+
+         
         </div>
       </div>
     </header>
   </header>
+<br/><br/>
 
-  <main>
-   
+<div class="wrapper" style = 'background: rgba(20,162,184,255); margin-top: -48px;'>
+<form method="POST" style = "margin-left: -75px;">
+	<input type="text" class="form-control" placeholder="Введіть своє питання" name="question" style = "margin-top: 25px; margin-left: -10px;">
+	<input type="submit" class="btn" id = "submit" value="Опублікувати" style = "margin-left: 210px; margin-top: -40px; position: absolute;">
+</form>
 
 
-  </main>
+<h3>Анонімні теми</h3>
 
 
 
-  <footer>
+<?php
+$host = 'localhost';
+
+$username = 'root';
+
+$password = '';
+
+$database = 'Forum';
+
+
+$database_connection = mysqli_connect($host, $username, $password, $database);
+
+if (isset($_POST['question']) && !empty($_POST['question'])) {
+    $question = $_POST['question'];
+    $query = "INSERT INTO `question` (`id`, `question`) VALUES (NULL, '$question')";
+    mysqli_query($database_connection, $query);
+    header("Location: index.php");
+}
+
+$questions_query = "SELECT * FROM `question`";
+$questions_result = mysqli_query($database_connection, $questions_query);
+
+while ($question_data = mysqli_fetch_assoc($questions_result)) {
+    $question = $question_data['question'];
+    $id = $question_data['id'];
+    echo "<div class='single-question'>
+	<b><a href='question.php?id=$id' onClick=\"window.open('question.php?id=$id','pagename','resizable,height=800,width=450'); return false;\" style='cursor: pointer; text-decoration: none;'>$question</a></b>
+    </div>";
+}
+?>
+
+</div>
+
+<footer>
         <ul class="nav mt-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-info">Допомога</a></li>
+          <li class="nav-item"><a href="help.html" class="nav-link px-2 text-info">Допомога</a></li>
           <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-info">Про нас</a></li>
         </ul>
     <div class="container mb-1">
@@ -119,7 +230,6 @@
     </div>
   </footer>
 
-
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -129,7 +239,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
     integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
     crossorigin="anonymous"></script>
-</body>
-
-
-</html>
