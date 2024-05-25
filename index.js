@@ -210,7 +210,7 @@ window.onload = function () {
                 },
                 {
                     href: '#', text: 'Медіа', class: 'text-info', dropdown: [
-                        { href: '#', text: 'Відеоуроки' },
+                        { href: 'video.html', text: 'Відеоуроки' },
                         { href: '#', text: 'Аудіоуроки' },
                     ]
                 },
