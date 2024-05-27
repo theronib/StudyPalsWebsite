@@ -25,7 +25,7 @@
         margin-left: 95px;
         padding: 30px;
         color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     h4 {
@@ -40,7 +40,8 @@
         width: 700px;
         padding: 20px;
         text-decoration: underline;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
     }
 
     h5 {
@@ -48,7 +49,7 @@
         background-color: white;
         border: 2px solid rgba(127, 185, 182, 255);
         border-radius: 8px;
-        text-align: center;
+        text-align: left;
         position: absolute;
         margin-left: 1000px;
         margin-top: -90px;
@@ -59,7 +60,7 @@
     }
 
     .sec {
-        padding: 10px 5%;
+        padding: 10px 8.5%;
     }
 
     .products {
@@ -150,11 +151,9 @@
         margin-left: -60px;
     }
 
-    iframe {
-        outline: 0.5rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        margin-left: 55px;
-        margin-bottom: 70px;
+    .audio {
+        margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .download-btn {
@@ -162,44 +161,18 @@
         background-color: white;
         border: 2px solid rgba(127, 185, 182, 255);
         border-radius: 8px;
-        margin-left: -135px;
-        margin-top: 330px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 20px;
         position: absolute;
-        padding: 8px 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 3px 20px;
+    }
+
+    audio {
+        width: 58.5%;
     }
 </style>
 
 <body class="">
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="text-right"> <i class="fa fa-close close" data-dismiss="modal"></i> </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-center mt-2">
-                                <img src="geography.png" width="180" style="margin-left: -30px; margin-top: -30px;">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-black" id="introtxt">
-                                <h1>Географія</h1>
-                                <div class="mt-4">
-                                    <span class="intro-2">Географія — система наук, що вивчає географічну оболонку Землі
-                                        (епігеосферу), її просторову природну і соціально-економічну різноманітність,
-                                        господарство і населення планети, окремих її регіонів та країн, а також зв'язки
-                                        між природним середовищем і діяльністю людини.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <header>
         <header class="p-3 text-white">
             <div class="container">
@@ -241,7 +214,6 @@
                         </li> -->
                         <li><a href="../video.html" class="nav-link px-2 text-info">Медіа</a></li>
 
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -277,57 +249,62 @@
     </header>
 
     <main>
-        <h1 class="pheading">Географія:</h1>
+        <h1 class="pheading">Українська мова:</h1>
         <div>
-            <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної
-                підготовки до
-                НМТ</h4>
-            <h5 onclick="location.href='geographyaudio.html';">Перейти до аудіоформату</h5>
-
+        <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної підготовки до
+            НМТ</h4>
+        <h5 onclick="location.href='ukrainianvideo.html';">Повернутися до відеоформату</h5>
         </div>
 
         <section class="sec">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/v1UxfFYXCAA?si=n3zD5ym5QmqMwXr6"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-cpux-8ov6.googlevideo.com/videoplayback?expire=1716760685&ei=DVxTZviWMNDa6dsPj_OWEA&ip=194.32.122.65&id=o-AHsymNnjzUGJ1uqH3TMfRvFdk48uvxxejLacZYOf5ND7&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=a4&mm=31%2C29&mn=sn-cpux-8ov6%2Csn-4g5lznl6&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1952500&bui=AWRWj2TR0JUrd-zWpEgCladY_Ohk3cOzJIfUDxhtTW0C-l4Ccz1BkAAuJJqXDHWYBXMn_LISV_1zQuEy&vprv=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=85831062&ratebypass=yes&dur=3061.063&lmt=1696868769271363&mt=1716738770&fvip=4&c=MEDIA_CONNECT_FRONTEND&txp=5309224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgNgZYaZdhE-2jie5k7Gghc4_GAeLkUCuk-CdY0xKxBgUCIQDgMsKZG5JCx42vW51pJUmHKhpxL4__pAY7EAYSn6LKbg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgEbBMMjEs2BUf-oq-qRcNDIGwv_f1syR2qSsCWFaQKsQCICSZ9ShDsvPB-pjfKvqABBmBphxXFSdiWfjTudjnYMOo&title=%D0%A3%D1%81%D0%B5%20%D0%BF%D1%80%D0%BE%20%D1%82%D0%BE%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%8E%20%D0%BD%D0%B0%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%97"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>Що вчити і як підготуватися до ЗНО-2023 з української мови?</p>
+                <audio controls>
+                    <source src="ukr6.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr6.m4a" download class="download-btn">Завантажити</a>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/H_tQruJwIqM?si=7JMRqhPKmWSODuG5"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-p5qddn76.googlevideo.com/videoplayback?expire=1716758567&ei=x1NTZu-hM-6HkucPo5658Aw&ip=102.165.16.228&id=o-ADgfy2C0xRQtTDZU6Idzi3KUFenTVPHEZ0EoZGcVhhF-&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=-u&mm=31%2C26&mn=sn-p5qddn76%2Csn-vgqsrnld&ms=au%2Conr&mv=m&mvi=1&pl=24&pcm2=no&initcwndbps=1807500&bui=AWRWj2SsxaG70Xjk98-oJ8s8XnhzS2fMjgcZLYkYv9GXFUoHC7mpLUFOcP8Gtd-lMrfqIUmH1Ypw3KLn&vprv=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=92335299&ratebypass=yes&dur=3280.050&lmt=1698079948656157&mt=1716736608&fvip=3&c=MEDIA_CONNECT_FRONTEND&txp=5309224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cbui%2Cvprv%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAP7QaOLFi5gd89l7j-KlK3byPbI1TWZwT-ClEa_ADxXMAiB10bKj20HPaNTUhKpy7Kw4GSwA80R19rWFnihXeFTZyw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIhANZu1DDYQFMovpWsMSE3yNFV0rt834uoBt7pym4Qgw4HAiA0l7XbXeSY14Ikjis4s8atxe6bF8zDiLHSn2zVJ9SKhg%3D%3D&title=%D0%A2%D0%BE%D0%BF-10%20%D0%BD%D0%B0%D0%B9%D0%B7%D0%B0%D0%BF%D0%BB%D1%83%D1%82%D0%B0%D0%BD%D1%96%D1%88%D0%B8%D1%85%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D1%8C%20%D0%BD%D0%B0%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%97"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>Марафон-практикум з української мови. Заняття 2.</p>
+                <audio controls>
+                    <source src="ukr1.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr1.m4a" download class="download-btn">Завантажити</a>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qJ7LR9uWNw4?si=YCq1ShIjZODrB4Mz"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr5---sn-h5qzen7s.googlevideo.com/videoplayback?expire=1716752349&ei=fTtTZqijIY-dhcIPn8G7qAk&ip=195.181.167.35&id=o-AKrZflFRp_y2DcLJlMW9qbq65mO9G_07mm8-sAlfZWxV&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Je&mm=31%2C29&mn=sn-h5qzen7s%2Csn-h5q7kned&ms=au%2Crdu&mv=m&mvi=5&pl=24&initcwndbps=2542500&bui=AWRWj2TMtcgAVA6J388hsZTs-joHxD1X2tL_wm1IM5uANSFTXGKBynEkK-LSwtOzdHPpWyA6iaQhMLq4&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3440.082&lmt=1705205316137701&mt=1716730371&fvip=3&c=MEDIA_CONNECT_FRONTEND&txp=5308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgA34t6Bdx7kmDHF75HycJbCE0OWJdo4P7KYoyWdKHu4ACIConlRnVWIX-WrVhdLLvqZTP6PLUgqqKLFEa1sn6KQRB&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgMDAqi9C23mUC9kg6LJaGIa7nNYg4wJN0xChoE5Nck90CIDnrxzWaOOYh_4xXJh_Mf2_cRDAb3Fp1f2XUy-IQXElU&title=%D0%A3%D1%81%D1%96%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%87%D0%BD%D1%96%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%96%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>Найважливіше про ЗНО/НМТ з української мови 2024</p>
+                <audio controls>
+                    <source src="ukr2.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr2.m4a" download class="download-btn">Завантажити</a>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bwag6NXeTJU?si=z0bjtDIMGn1SG5G7"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr4---sn-ixh7yn7e.googlevideo.com/videoplayback?expire=1716758618&ei=-lNTZp_dHuW1v_IP5YuxmA4&ip=188.126.89.151&id=o-APfLotjRW9ZkPTUct46Iz_Ww8wBUYXF8r0Lil_znVETt&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=yi&mm=31%2C26&mn=sn-ixh7yn7e%2Csn-5goeenes&ms=au%2Conr&mv=m&mvi=4&pl=24&initcwndbps=1890000&bui=AWRWj2SSVLRNVJDTqx8e_7GIOR8sSooMEVG1ou0MAVWr75zKVt9qhI3DIWc8njIOSUD-SrC7mXn_Cq3G&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4030.055&lmt=1708846843589691&mt=1716736859&fvip=2&c=MEDIA_CONNECT_FRONTEND&txp=7208224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAMJedeh-heIbP4ZuH1v2SvDj94offlozYtZi8zz5WR-SAiEAgSruL4veLs2HC6sZ8hlQD2CAL36vRMOBC0h8Z9glkY0%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIgdbBx4E6LWBUrENqe2MXpRRT16Eiz3aMrWQAm-BEygvYCIQCxj4yMAnNlQ-jcachlxCyXnvVtv11Ao6uL5V_pZNdnEA%3D%3D&title=%D0%A0%D0%BE%D0%B7%D0%B1%D1%96%D1%80%20%D1%96%D0%BC%D1%96%D1%82%D0%B0%D1%86%D1%96%D1%97%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%97"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>Розбір НМТ з основної сесії</p>
+                <audio controls>
+                    <source src="ukr3.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr3.m4a" download class="download-btn">Завантажити</a>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uXK8gktNmNE?si=9J3P0x28m6rx1wNO"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr2---sn-4g5edn6r.googlevideo.com/videoplayback?expire=1716758649&ei=GVRTZoHwGP3e6dsPgeCxkAo&ip=147.78.226.170&id=o-AKcZ-PGPKcT1Hp5iGNeWqrdwv3Nw5a2kiICz5l0QM66_&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Cy&mm=31%2C29&mn=sn-4g5edn6r%2Csn-4g5e6nss&ms=au%2Crdu&mv=m&mvi=2&pl=23&initcwndbps=4386250&bui=AWRWj2SMbKaAJ5KLpiswKpv0XVGPYUxqH1SsfbZ08vi0yTEOMFdlWXWpvYgz5uGt7X0-oXLEbMNPuCq2&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3573.086&lmt=1710614439475598&mt=1716736859&fvip=1&c=MEDIA_CONNECT_FRONTEND&txp=5308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhANC9Sq5eZI9-zICmCjCWXIWxR0U60ou-CQa_NE4R0WkuAiBWQQpzI04t3G_mOUpQZX2FrrM1K49eDsWvGNrImygqSA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRgIhAMDZuoP8fxMs6IdZItWQVJqSHs1pbdmLdEIqI5xUpOUEAiEApEPN9iUQszyHRoV-mJubgWXOks-8SPoAzk5wN43Ziuw%3D&title=%D0%A3%D1%81%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%97"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>10 найзаплутаніших тестів НМТ/ЗНО з української</p>
+                <audio controls>
+                    <source src="ukr4.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr4.m4a" download class="download-btn">Завантажити</a>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yzdbh70p8rg?si=sunn897KVOGfVL0F"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr5---sn-5go7ynlk.googlevideo.com/videoplayback?expire=1716758673&ei=MVRTZqShCcWc0u8PxOSckAo&ip=46.246.122.94&id=o-AGrk64Ui6-WQeMGZDwO1y_GNBvsulpQVOhvYdHdTVGjY&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=d1&mm=31%2C26&mn=sn-5go7ynlk%2Csn-ixh7yn7d&ms=au%2Conr&mv=m&mvi=5&pl=23&initcwndbps=2931250&bui=AWRWj2QelRLCSR2IZRpH531qbaIBTUqD80COgT9hXCqq8oD4TR_XprCD7yODPcvuH60RYVJw8F_vZnJT&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=5217.709&lmt=1714244396757343&mt=1716736608&fvip=2&c=MEDIA_CONNECT_FRONTEND&txp=5308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAPRhQvByatiFEeKjwtb1Drc95x706D4IZuCS6T6Gut_EAiAoGrku4QFZWuWK4oUcMk9InmEqWMtS091RgXIv_SxaOw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRgIhAMShlw-iTVrU0dV4CkYusDvky-5_cSMzVp6O33_5lw54AiEA_EZzLWslngXzMVbH2DUB4-PIaj_bJfo1JBM2nrQza6U%3D&title=%D0%A3%D1%81%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2"
-                class="download-btn">Завантажити</a>
+            <div class="audio">
+                <p>Розбір авторської імітації для НМТ з української</p>
+                <audio controls>
+                    <source src="ukr5.m4a" type="audio/x-m4a">
+                </audio>
+                <a href="ukr5.m4a" download class="download-btn">Завантажити</a>
+            </div>
+
         </section>
     </main>
 

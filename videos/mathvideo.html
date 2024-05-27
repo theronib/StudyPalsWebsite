@@ -25,7 +25,7 @@
         margin-left: 95px;
         padding: 30px;
         color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     h4 {
@@ -40,8 +40,25 @@
         width: 700px;
         padding: 20px;
         text-decoration: underline;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
     }
+
+    h5 {
+        color: rgba(255, 95, 0, 255);
+        background-color: white;
+        border: 2px solid rgba(127, 185, 182, 255);
+        border-radius: 8px;
+        text-align: center;
+        position: absolute;
+        margin-left: 1000px;
+        margin-top: -90px;
+        width: 312px;
+        padding: 13px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
+    }
+
 
     .sec {
         padding: 10px 5%;
@@ -215,7 +232,7 @@
 
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Медіа</a>
@@ -225,7 +242,8 @@
 
 
                             </div>
-                        </li>
+                        </li> -->
+                        <li><a href="../video.html" class="nav-link px-2 text-info">Медіа</a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
@@ -263,8 +281,12 @@
 
     <main>
         <h1 class="pheading">Математика:</h1>
-        <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної підготовки до
-            НМТ</h4>
+        <div>
+            <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної
+                підготовки до
+                НМТ</h4>
+            <h5 onclick="location.href='mathaudio.html';">Перейти до аудіоформату</h5>
+        </div>
 
         <section class="sec">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/kQc0Cjmsaqc?si=xCTotDPGoid5hnOQ"
@@ -308,57 +330,6 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <a href="https://rr1---sn-4g5e6nzz.googlevideo.com/videoplayback?expire=1716749158&ei=Bi9TZqGOAafy0wX6hJjIDw&ip=98.159.234.27&id=o-AD06puDNmILeVwKvACtoGmt5kEaa0aFD3hVX2tfy3F-W&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=tZ&mm=31%2C29&mn=sn-4g5e6nzz%2Csn-4g5ednld&ms=au%2Crdu&mv=m&mvi=1&pl=26&initcwndbps=1411250&bui=AWRWj2Qph-oZpvPM8BYqgunHO_zvFADM93J-11QC2dV3Djhelli4Ss08-LH3QNCm4-C22w6-Hc-FS5AJ&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=10325.054&lmt=1706699119980773&mt=1716727259&fvip=1&c=MEDIA_CONNECT_FRONTEND&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgUR1tUYFHJ48D5XJ8eW8p7MbaeEX0iHG4OW6iV2wuq2ICIQCymarst9zDlgyx3Rmk6kdGwQmhcwiWknxwx66wa1Xg4w%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgYM25B5EalhxqQtNEgPQx8FuFSsopK5ke8YKv4THJ5pACIFrm-EMmNS-U9WXs9TgFPBV6UpfdE2Pa5WCDVaD8EIpe&title=%D0%A3%D1%81%D1%8F%20%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2%20%D0%B7%D0%B0%20%D0%BE%D0%B4%D0%BD%D0%B5%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F"
                 class="download-btn">Завантажити</a>
-
-            <!-- <div class="products" id="prod">
-
-                    <div class="card" id="ukrainian" onclick="location.href='videos/ukrainianvideo.html';">
-                        <p>Українська мова</p>
-                        <img class="lessons" src="ukrainian.jpg" alt="ukrainian">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/mathvideo.html';">
-                        <p>Математика</p>
-                        <img src="math.jpg" alt="math" class="lessons">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/historyvideo.html';">
-                        <p>Історія України</p>
-                        <img src="history.jpg" alt="history" class="lessons">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/literaturevideo.html';">
-                        <p style="margin-top: 65px;">Українська література</p>
-                        <img src="literature.jpg" alt="literature" class="lessons">
-
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/englishvideo.html';">
-                        <p>Англійська мова</p>
-                        <img src="english.jpg" alt="english" class="lessons">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/biologyvideo.html';">
-                        <p>Біологія</p>
-                        <img src="biology.jpg" alt="biology" class="lessons">
-
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/geographyvideo.html';">
-                        <p>Географія</p>
-                        <img src="geography.jpg" alt="geography" class="lessons">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/chemistryvideo.html';">
-                        <p>Хімія</p>
-                        <img src="chemistry.jpg" alt="chemistry" class="lessons">
-                    </div>
-
-                    <div class="card" onclick="location.href='videos/physicsvideo.html';">
-                        <p>Фізика</p>
-                        <img src="physics.jpg" alt="chemistry" class="lessons">
-
-                    </div>
-                </div> -->
         </section>
     </main>
 
