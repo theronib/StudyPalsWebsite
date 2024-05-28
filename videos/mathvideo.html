@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylevideo.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,163 +16,6 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<style>
-    main {
-        background-color: rgba(20, 162, 184, 255);
-    }
-
-    .pheading {
-        text-align: left;
-        margin-left: 95px;
-        padding: 30px;
-        color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    h4 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: left;
-        margin-left: 120px;
-        margin-top: -20px;
-        margin-bottom: 30px;
-        width: 700px;
-        padding: 20px;
-        text-decoration: underline;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-    }
-
-    h5 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: center;
-        position: absolute;
-        margin-left: 1000px;
-        margin-top: -90px;
-        width: 312px;
-        padding: 13px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-    }
-
-
-    .sec {
-        padding: 10px 5%;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        grid-column-gap: 15px;
-        margin-left: 50px;
-        text-align: center;
-    }
-
-    .products .card {
-        width: 350px;
-        background-color: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        outline: 0.2rem solid rgb(146, 220, 220);
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-
-    .products .card .desc {
-        padding: 5px 20px;
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .products .card .box .btn:hover {
-        cursor: pointer;
-        background-color: rgba(255, 95, 0, 255);
-        color: white;
-    }
-
-    .lessons {
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        height: 100%;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-    .products .card p {
-        color: rgba(255, 95, 0, 255);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        position: absolute;
-        z-index: 1;
-        margin-left: 35px;
-        margin-top: 90px;
-        background-color: white;
-        width: 80%;
-        border: 3px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-    }
-
-    .lessons:hover {
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-    }
-
-    .modal-body {
-        background-color: rgb(255, 255, 255);
-        outline: 0.9rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: rgba(255, 95, 0, 255);
-
-    }
-
-    .close {
-        color: #fff;
-    }
-
-
-    .close:hover {
-        color: rgba(20, 162, 184, 255);
-    }
-
-
-    .intro-2 {
-        font-size: 14px;
-    }
-
-    #introtxt {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        margin-left: -60px;
-    }
-
-    iframe {
-        outline: 0.5rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        margin-left: 55px;
-        margin-bottom: 70px;
-    }
-
-    .download-btn {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        margin-left: -135px;
-        margin-top: 330px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        position: absolute;
-        padding: 8px 20px;
-    }
-</style>
 
 <body class="">
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -216,20 +61,20 @@
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="../website.html" class="nav-link px-2 text-info">Головна</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
+                            <a class="nav-link dropdown-toggle px-2 text-info" href="../studymaterials.html" id="materialsDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Матеріали</a>
                             <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                                <a class="dropdown-item" href="#">Українська мова</a>
-                                <a class="dropdown-item" href="#">Математика</a>
-                                <a class="dropdown-item" href="#">Історія України</a>
-                                <a class="dropdown-item" href="#">Українська література</a>
-                                <a class="dropdown-item" href="#">Іноземні мови</a>
-                                <a class="dropdown-item" href="#">Біологія</a>
-                                <a class="dropdown-item" href="#">Географія</a>
-                                <a class="dropdown-item" href="#">Хімія</a>
-                                <a class="dropdown-item" href="#">Фізика</a>
-
+                                <a class="dropdown-item" href="../textmaterials/ukrtopics.html">Українська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/mathtopics.html">Математика</a>
+                                <a class="dropdown-item" href="../textmaterials/historytopics.html">Історія України</a>
+                                <a class="dropdown-item" href="../textmaterials/literaturetopics.html">Українська
+                                    література</a>
+                                <a class="dropdown-item" href="../textmaterials/englishtopics.html">Англійська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/biologytopics.html">Біологія</a>
+                                <a class="dropdown-item" href="../textmaterials/geographytopics.html">Географія</a>
+                                <a class="dropdown-item" href="../textmaterials/chemistrytopics.html">Хімія</a>
+                                <a class="dropdown-item" href="../textmaterials/physicstopics.html">Фізика</a>
                             </div>
                         </li>
                         <!-- <li class="nav-item dropdown">
@@ -293,43 +138,37 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr2---sn-q4flrnld.googlevideo.com/videoplayback?expire=1716748952&ei=OC5TZoPgB5eb2_gPs56D6Ag&ip=181.215.182.9&id=o-AAkUzmVq-26jcYJcEl32E18N5mTsqkQ7DNmCE-H24zeu&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=qP&mm=31%2C29&mn=sn-q4flrnld%2Csn-q4fl6nsl&ms=au%2Crdu&mv=m&mvi=2&pl=24&initcwndbps=543750&bui=AWRWj2QkjyigAx1l13T-ixqiLuKpFgPAHSVcMPXqUk_-XAkksesdd7TZ73CBSghv9TdeeV_LsNNtLRdE&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=1110.726&lmt=1699525781765973&mt=1716727008&fvip=2&c=MEDIA_CONNECT_FRONTEND&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAIpuYGwcp4_zczmgc9cyaIwBpHXRVbbeuWJ6OMeuMlFFAiEAm5QMjGIOclx8gwKbf9dL8I-TIjQ2O1AdAvWKbzL2nHQ%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIgJ4YC-R6_KM_XWuiM6CO31coWfllLl2L6R9ot7RU1g0ECIQDtEaCC2QSwiW7VFrjNbmcz9KqSiXzbxsoLXjrCNgfEEA%3D%3D&title=%D0%A9%D0%BE%20%D0%B2%D1%87%D0%B8%D1%82%D0%B8%20%D1%96%20%D1%8F%D0%BA%20%D0%BF%D1%96%D0%B4%D0%B3%D0%BE%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8%D1%81%D1%8F%20%D0%B4%D0%BE%20%D0%97%D0%9D%D0%9E-2023%20%D0%B7%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8%3F%20%7C%20ZNOHUB%20%D0%9C%D0%90%D0%A2%D0%95%D0%9C%D0%90%D0%A2%D0%98%D0%9A%D0%90"
-                class="download-btn">Завантажити</a>
+            <a href="math1.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/83natHmuD0I?si=z3nX_JA0OYruwfiw"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr5---sn-npoe7nsr.googlevideo.com/videoplayback?expire=1716749006&ei=bi5TZvz1LvO74-EPhJWRgAU&ip=103.136.58.187&id=o-ADp5PMFyEZJifROPLJJty3SoJsb49pZ24ca0EIIT3Z_P&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=DM&mm=31%2C29&mn=sn-npoe7nsr%2Csn-npoldne7&ms=au%2Crdu&mv=m&mvi=5&pl=24&initcwndbps=601250&bui=AWRWj2Rmw-R75op8Jisy42RYNx3um7m36K84NARdG6LCW_2S2bjO5kMVGm7ysKmWN4iWMddHNUV9tTZU&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4880.044&lmt=1703601785581338&mt=1716727008&fvip=5&c=MEDIA_CONNECT_FRONTEND&txp=5308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAL8XeWOlc4OqnrYMHsRistOJOeG50oNYme_mC2lJ7hokAiEAl1vJG7oFN3dT8LeTm9yU5Sl69idffvHjyHsXqEXmK1Y%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIhAIlNykvEfsPqiR57qoED0GgrQPynRKCKtO8VfXTOJo1uAiB3ijoiIMHBZN3tUavjMpinPyisYaimTleKK3YrboY0vw%3D%3D&title=%D0%A0%D0%BE%D0%B7%D0%B1%D1%96%D1%80%20%D0%B2%D0%B0%D1%80%D1%96%D0%B0%D0%BD%D1%82%D1%83%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="math2.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIsUgoVpu4g?si=jpZ9SKY0u-RtNHTK"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr3---sn-h5q7knez.googlevideo.com/videoplayback?expire=1716749037&ei=jS5TZtGKJYC8p-oPuviu2AM&ip=146.70.59.21&id=o-ANA4cXY3dRyms9IBCWlhftXW01GLxIlj09jmFKrY5KHB&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Sm&mm=31%2C29&mn=sn-h5q7knez%2Csn-h5qzen7l&ms=au%2Crdu&mv=m&mvi=3&pl=24&initcwndbps=2066250&bui=AWRWj2TR3u8tLjULKNxhumZKeLRRTSdDcAY-S86KRBuCkvkfkL0lxahieuBEoHmxmXxUn6lwUvBHUNCk&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4534.067&lmt=1704718931008185&mt=1716727008&fvip=3&c=MEDIA_CONNECT_FRONTEND&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAKmwhd3wj7uceYlNNgWWYHgE7ncRxnQrQs1BYGzUaIgTAiBFUOK5IGaEEMZGro-umrK-ILCsXQd60eqXisskxulC-w%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgKwT7jMK-hhXktvFIzAqqJNTf_ygz9-fizO-aT1Y2MA0CIAPKwUacD4byDRArTpjt6Kcf-CBiDZcxYLtTlITdIsg-&title=%D0%AF%D0%BA%20%D0%BF%D1%96%D0%B4%D0%B3%D0%BE%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8%D1%81%D1%8F%20%D0%B4%D0%BE%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8%20%D0%B7%D0%B0%205%20%D0%BC%D1%96%D1%81%D1%8F%D1%86%D1%96%D0%B2"
-                class="download-btn">Завантажити</a>
+            <a href="math4.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QYouTarnZ7k?si=eWxU7DMBP0kKTFox"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr3---sn-5uaezne6.googlevideo.com/videoplayback?expire=1716749080&ei=uC5TZvyNEu7Xj-8PiYOrmAQ&ip=2605%3A59c8%3A6762%3Aae00%3A%3A1007&id=o-AHOydfpH_vBGB73Geu5COFkHMs-_bbkItikuM_Szn1VB&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=y0&mm=31%2C26&mn=sn-5uaezne6%2Csn-q4flrnlz&ms=au%2Conr&mv=m&mvi=3&pl=42&initcwndbps=623750&bui=AWRWj2RiZqmBr8yx8Y_PrPs36GAQZ2E4vjMLKGNwEU6cpeaj_2XxfNuvAT65RsazpRv88wRK87vNxQIV&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4717.064&lmt=1707256094691641&mt=1716727008&fvip=2&c=MEDIA_CONNECT_FRONTEND&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgFxId1c46tr8D01ckTxk0xgd8Q33cAL3mODJE69SZ4sYCICJo0cCAohZ44QV0EJIyXiGeKO7tXQ5Y7SMVVIQ26KjV&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgEluphXqhHoYvJNAl3fsfU4YSU04piIIUoq_R_iiquYsCIA5SzlyPQU4FpD21auko2eQAIoc2mksLNMCAS7yvYIOg&title=%D0%9F%D1%96%D0%B4%D1%81%D1%82%D1%83%D0%BF%D0%BD%D1%96%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%20%D0%BD%D0%B0%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="math5.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/tFbmM_QTEew?si=FGDDAODJlinwAXYv"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr5---sn-q4flrnez.googlevideo.com/videoplayback?expire=1716749117&ei=3S5TZtKPEZe30_wPqrOb-Aw&ip=181.215.182.93&id=o-ANVhRIMfjeY4Q3MZfFfcG-m1C6DPCRSwAVlxwQPxRjoO&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=1M&mm=31%2C29&mn=sn-q4flrnez%2Csn-q4fl6nde&ms=au%2Crdu&mv=m&mvi=5&pl=24&initcwndbps=657500&bui=AWRWj2Skqjb5J7cmvSsVvRDLe7qPm4uxRu57Ws7uFadnjylQ7Xi3JxDbznorKu6TCzjGC9Z1wnuBgc38&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=6518.862&lmt=1712440109315004&mt=1716727259&fvip=5&c=MEDIA_CONNECT_FRONTEND&txp=5308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgDuxWXyS-k7C47A5sv9a9tVFI1Vj2M6S5dhIlJ2cMO24CIQCDqDrKOQoM-ZOQ561bssFYXbDnors8SEeYQ3-2yCjNuQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIgK0dGiGHxwjfb7HEegEuTv4ATqD6NXAgQQ6ZscYyldB8CIQD73ie5BVersZCmQO76xG-mxBJeHVfJPN3r9NmZTz0AtA%3D%3D&title=%D0%A3%D1%81%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D1%96%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2%20%D0%B7%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="math6.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/cZO_tAehAN4?si=v6tGcc_Is7-9aeM1"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-4g5e6nzz.googlevideo.com/videoplayback?expire=1716749158&ei=Bi9TZqGOAafy0wX6hJjIDw&ip=98.159.234.27&id=o-AD06puDNmILeVwKvACtoGmt5kEaa0aFD3hVX2tfy3F-W&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=tZ&mm=31%2C29&mn=sn-4g5e6nzz%2Csn-4g5ednld&ms=au%2Crdu&mv=m&mvi=1&pl=26&initcwndbps=1411250&bui=AWRWj2Qph-oZpvPM8BYqgunHO_zvFADM93J-11QC2dV3Djhelli4Ss08-LH3QNCm4-C22w6-Hc-FS5AJ&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=10325.054&lmt=1706699119980773&mt=1716727259&fvip=1&c=MEDIA_CONNECT_FRONTEND&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgUR1tUYFHJ48D5XJ8eW8p7MbaeEX0iHG4OW6iV2wuq2ICIQCymarst9zDlgyx3Rmk6kdGwQmhcwiWknxwx66wa1Xg4w%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgYM25B5EalhxqQtNEgPQx8FuFSsopK5ke8YKv4THJ5pACIFrm-EMmNS-U9WXs9TgFPBV6UpfdE2Pa5WCDVaD8EIpe&title=%D0%A3%D1%81%D1%8F%20%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%9D%D0%9C%D0%A2%20%D0%B7%D0%B0%20%D0%BE%D0%B4%D0%BD%D0%B5%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F"
-                class="download-btn">Завантажити</a>
+            <a href="math7.mp4" download class="download-btn">Завантажити</a>
         </section>
     </main>
 

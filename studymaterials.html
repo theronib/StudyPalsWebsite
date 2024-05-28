@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <style>
@@ -15,45 +20,78 @@
         background-color: rgba(20, 162, 184, 255);
     }
 
-    h2,
-    h3 {
+    .pheading {
+        text-align: center;
+        padding: 25px;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+
+    .sec {
+        padding: 10px 5%;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        grid-column-gap: 15px;
+        margin-left: 50px;
+        text-align: center;
+    }
+
+    .products .card {
+        width: 350px;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        outline: 0.2rem solid rgb(146, 220, 220);
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+
+    .products .card .desc {
+        padding: 5px 20px;
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .products .card .box .btn:hover {
+        cursor: pointer;
+        background-color: rgba(255, 95, 0, 255);
+        color: white;
+    }
+
+    .lessons {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        height: 100%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .products .card p {
+        color: rgba(255, 95, 0, 255);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 3px solid;
-        animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
-        color: rgb(164, 239, 248);
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        z-index: 1;
+        margin-left: 35px;
+        margin-top: 90px;
+        background-color: white;
+        width: 80%;
+        border: 3px solid rgba(127, 185, 182, 255);
+        border-radius: 8px;
     }
 
-
-    @keyframes typewriter {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes blinkTextCursor {
-        from {
-            border-right-color: hsl(0, 0%, 80%);
-        }
-
-        to {
-            border-right-color: transparent;
-        }
-    }
-
-    .stop-blink {
-        animation: none;
-        border-right: none;
+    .lessons:hover {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
     }
 </style>
 
-<body>
-
+<body class="">
     <header>
         <header class="p-3 text-white">
             <div class="container">
@@ -105,9 +143,12 @@
 
                             </div>
                         </li>
+
                         <li><a href="index.html" class="nav-link px-2 text-info">Чат</a></li>
                         <li><a href="#" class="nav-link px-2 text-info">Додаткові уроки</a></li>
                         <li><a href="store.html" class="nav-link px-2 text-info">Магазин</a></li>
+
+
 
                     </ul>
 
@@ -125,74 +166,64 @@
     </header>
 
     <main>
-        <section class="py-3 py-md-5">
-            <div class="container">
-                <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <img class="img-fluid rounded" loading="lazy" src="computer.png" alt="About 1">
+        <main>
+
+
+            <h1 class="pheading">Матеріали з предметів:</h1>
+
+            <section class="sec">
+                <div class="products" id="prod">
+
+                    <div class="card" id="ukrainian" onclick="location.href='textmaterials/ukrtopics.html';">
+                        <p>Українська мова</p>
+                        <img class="lessons" src="ukrainian.jpg" alt="ukrainian">
                     </div>
-                    <div class="col-12 col-lg-6 col-xl-7">
-                        <div class="row justify-content-xl-center">
-                            <div class="col-12 col-xl-11">
-                                <h2 class="mb-3">Хто ми?</h2>
-                                <p class="lead fs-4 text-white mb-3">StudyPals - Платформа для підготовки до НМТ. Це
-                                    чудове місце для вивчення і повторення шкільного матеріалу.
-                                </p>
-                                <p class="mb-5">Ми - команда ентузіастів, що об’єднали свої зусилля, аби створити
-                                    інноваційний та зручний інструмент для учнів, які готуються до Національного
-                                    мультипредметного тесту. Наша мета - допомогти кожному учню досягти високих
-                                    результатів та відчувати себе впевнено під час складання іспиту.</p>
 
-                                <h3 class="mb-3">Цілі, які ми переслідуємо:</h3>
-                                <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                                    <div class="col-12 col-md-6">
-                                        <div class="d-flex">
+                    <div class="card" onclick="location.href='textmaterials/mathtopics.html';">
+                        <p>Математика</p>
+                        <img src="math.jpg" alt="math" class="lessons">
+                    </div>
 
-                                            <div>
-                                                <h2 class="h4 mb-3">Підвищення рівня освіти</h2>
-                                                <p class="text-white mb-0">Ми прагнемо забезпечити учнів якісними
-                                                    навчальними матеріалами, що відповідають найвищим освітнім
-                                                    стандартам.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h2 class="h4 mb-3">Доступність освіти</h2>
-                                                <p class="text-white mb-0">Створити платформу, яка буде доступною
-                                                    для всіх, включаючи учнів з обмеженими можливостями.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 mt-5">
-                                        <div class="d-flex">
+                    <div class="card" onclick="location.href='textmaterials/historytopics.html';">
+                        <p>Історія України</p>
+                        <img src="history.jpg" alt="history" class="lessons">
+                    </div>
 
-                                            <div>
-                                                <h2 class="h4 mb-3">Інтерактивне навчання</h2>
-                                                <p class="text-white mb-0">Забезпечити інтерактивні методи навчання, які
-                                                    зроблять процес підготовки цікавим та ефективним.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="card" onclick="location.href='textmaterials/literaturetopics.html';">
+                        <p style="margin-top: 65px;">Українська література</p>
+                        <img src="literature.jpg" alt="literature" class="lessons">
 
-                                    <div class="col-12 col-md-6 mt-5">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h2 class="h4 mb-3">Орієнтація на результат</h2>
-                                                <p class="text-white mb-0">Допомагати учням досягати високих результатів
-                                                    на НМТ завдяки структурованій та систематичній підготовці.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
 
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card" onclick="location.href='textmaterials/englishtopics.html';">
+                        <p>Англійська мова</p>
+                        <img src="english.jpg" alt="english" class="lessons">
+                    </div>
+
+                    <div class="card" onclick="location.href='textmaterials/biologytopics.html';">
+                        <p>Біологія</p>
+                        <img src="biology.jpg" alt="biology" class="lessons">
+
+                    </div>
+
+                    <div class="card" onclick="location.href='textmaterials/geographytopics.html';">
+                        <p>Географія</p>
+                        <img src="geography.jpg" alt="geography" class="lessons">
+                    </div>
+
+                    <div class="card" onclick="location.href='textmaterials/chemistrytopics.html';">
+                        <p>Хімія</p>
+                        <img src="chemistry.jpg" alt="chemistry" class="lessons">
+                    </div>
+
+                    <div class="card" onclick="location.href='textmaterials/physicstopics.html';">
+                        <p>Фізика</p>
+                        <img src="physics.jpg" alt="chemistry" class="lessons">
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
 
     </main>
@@ -236,6 +267,9 @@
     </footer>
 
 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -245,22 +279,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const headers = document.querySelectorAll('h2, h3');
-
-            headers.forEach(header => {
-                header.addEventListener('animationend', function (event) {
-                    if (event.animationName === 'typewriter') {
-                        header.classList.add('stop-blink');
-                    }
-                });
-            });
-        });
-    </script>
-
-
 </body>
 
 

@@ -97,17 +97,17 @@ h3{
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Матеріали</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                <a class="dropdown-item" href="#">Українська мова</a>
-                <a class="dropdown-item" href="#">Математика</a>
-                <a class="dropdown-item" href="#">Історія України</a>
-                <a class="dropdown-item" href="#">Українська література</a>
-                <a class="dropdown-item" href="#">Іноземні мови</a>
-                <a class="dropdown-item" href="#">Біологія</a>
-                <a class="dropdown-item" href="#">Географія</a>
-                <a class="dropdown-item" href="#">Хімія</a>
-                <a class="dropdown-item" href="#">Фізика</a>
-
-              </div>
+                                <a class="dropdown-item" href="textmaterials/ukrtopics.html">Українська мова</a>
+                                <a class="dropdown-item" href="textmaterials/mathtopics.html">Математика</a>
+                                <a class="dropdown-item" href="textmaterials/historytopics.html">Історія України</a>
+                                <a class="dropdown-item" href="textmaterials/literaturetopics.html">Українська
+                                    література</a>
+                                <a class="dropdown-item" href="textmaterials/englishtopics.html">Англійська мова</a>
+                                <a class="dropdown-item" href="textmaterials/biologytopics.html">Біологія</a>
+                                <a class="dropdown-item" href="textmaterials/geographytopics.html">Географія</a>
+                                <a class="dropdown-item" href="textmaterials/chemistrytopics.html">Хімія</a>
+                                <a class="dropdown-item" href="textmaterials/physicstopics.html">Фізика</a>
+                            </div>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Медіа</a>

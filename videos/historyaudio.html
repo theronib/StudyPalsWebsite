@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleaudio.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,163 +16,6 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<style>
-    main {
-        background-color: rgba(20, 162, 184, 255);
-    }
-
-    .pheading {
-        text-align: left;
-        margin-left: 95px;
-        padding: 30px;
-        color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    h4 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: left;
-        margin-left: 120px;
-        margin-top: -20px;
-        margin-bottom: 30px;
-        width: 700px;
-        padding: 20px;
-        text-decoration: underline;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-    }
-
-    h5 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: left;
-        position: absolute;
-        margin-left: 1000px;
-        margin-top: -90px;
-        width: 312px;
-        padding: 13px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-    }
-
-    .sec {
-        padding: 10px 8.5%;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        grid-column-gap: 15px;
-        margin-left: 50px;
-        text-align: center;
-    }
-
-    .products .card {
-        width: 350px;
-        background-color: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        outline: 0.2rem solid rgb(146, 220, 220);
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-
-    .products .card .desc {
-        padding: 5px 20px;
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .products .card .box .btn:hover {
-        cursor: pointer;
-        background-color: rgba(255, 95, 0, 255);
-        color: white;
-    }
-
-    .lessons {
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        height: 100%;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-    .products .card p {
-        color: rgba(255, 95, 0, 255);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        position: absolute;
-        z-index: 1;
-        margin-left: 35px;
-        margin-top: 90px;
-        background-color: white;
-        width: 80%;
-        border: 3px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-    }
-
-    .lessons:hover {
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-    }
-
-    .modal-body {
-        background-color: rgb(255, 255, 255);
-        outline: 0.9rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: rgba(255, 95, 0, 255);
-
-    }
-
-    .close {
-        color: #fff;
-    }
-
-
-    .close:hover {
-        color: rgba(20, 162, 184, 255);
-    }
-
-
-    .intro-2 {
-        font-size: 14px;
-    }
-
-    #introtxt {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        margin-left: -60px;
-    }
-
-    .audio {
-        margin-bottom: 20px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    .download-btn {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        margin-left: 20px;
-        position: absolute;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        padding: 3px 20px;
-    }
-
-    audio {
-        width: 58.5%;
-    }
-</style>
 
 <body class="">
     <header>
@@ -185,20 +30,20 @@
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="../website.html" class="nav-link px-2 text-info">Головна</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
+                            <a class="nav-link dropdown-toggle px-2 text-info" href="../studymaterials.html" id="materialsDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Матеріали</a>
                             <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                                <a class="dropdown-item" href="#">Українська мова</a>
-                                <a class="dropdown-item" href="#">Математика</a>
-                                <a class="dropdown-item" href="#">Історія України</a>
-                                <a class="dropdown-item" href="#">Українська література</a>
-                                <a class="dropdown-item" href="#">Іноземні мови</a>
-                                <a class="dropdown-item" href="#">Біологія</a>
-                                <a class="dropdown-item" href="#">Географія</a>
-                                <a class="dropdown-item" href="#">Хімія</a>
-                                <a class="dropdown-item" href="#">Фізика</a>
-
+                                <a class="dropdown-item" href="../textmaterials/ukrtopics.html">Українська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/mathtopics.html">Математика</a>
+                                <a class="dropdown-item" href="../textmaterials/historytopics.html">Історія України</a>
+                                <a class="dropdown-item" href="../textmaterials/literaturetopics.html">Українська
+                                    література</a>
+                                <a class="dropdown-item" href="../textmaterials/englishtopics.html">Англійська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/biologytopics.html">Біологія</a>
+                                <a class="dropdown-item" href="../textmaterials/geographytopics.html">Географія</a>
+                                <a class="dropdown-item" href="../textmaterials/chemistrytopics.html">Хімія</a>
+                                <a class="dropdown-item" href="../textmaterials/physicstopics.html">Фізика</a>
                             </div>
                         </li>
                         <!-- <li class="nav-item dropdown">
@@ -251,9 +96,10 @@
     <main>
         <h1 class="pheading">Історія України:</h1>
         <div>
-        <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної підготовки до
-            НМТ</h4>
-        <h5 onclick="location.href='historyvideo.html';">Повернутися до відеоформату</h5>
+            <h4 onclick="location.href='https://www.youtube.com/@znohub';">Автор: ЗНОХАБ. Онлайн-школа якісної
+                підготовки до
+                НМТ</h4>
+            <h5 onclick="location.href='historyvideo.html';">Повернутися до відеоформату</h5>
         </div>
 
         <section class="sec">

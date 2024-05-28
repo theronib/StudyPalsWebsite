@@ -196,16 +196,16 @@ window.onload = function () {
             var navItems = [
                 { href: 'website.html', text: 'Головна', class: 'text-info' },
                 {
-                    href: '#', text: 'Матеріали', class: 'text-info', dropdown: [
-                        { href: '#', text: 'Українська мова' },
-                        { href: '#', text: 'Математика' },
-                        { href: '#', text: 'Історія України' },
-                        { href: '#', text: 'Українська література' },
-                        { href: '#', text: 'Іноземні мови' },
-                        { href: '#', text: 'Біологія' },
-                        { href: '#', text: 'Географія' },
-                        { href: '#', text: 'Хімія' },
-                        { href: '#', text: 'Фізика' },
+                    href: 'studymaterials.html', text: 'Матеріали', class: 'text-info', dropdown: [
+                        { href: 'textmaterials/ukrtopics.html', text: 'Українська мова' },
+                        { href: 'textmaterials/mathtopics.html', text: 'Математика' },
+                        { href: 'textmaterials/historytopics.html', text: 'Історія України' },
+                        { href: 'textmaterials/literaturetopics.html', text: 'Українська література' },
+                        { href: 'textmaterials/englishtopics.html', text: 'Іноземні мови' },
+                        { href: 'textmaterials/biologytopics.html', text: 'Біологія' },
+                        { href: 'textmaterials/geographytopics.html', text: 'Географія' },
+                        { href: 'textmaterials/chemistrytopics.html', text: 'Хімія' },
+                        { href: 'textmaterials/physicstopics.html', text: 'Фізика' },
                     ]
                 },
 

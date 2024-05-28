@@ -151,7 +151,6 @@
         margin: 0 10px;
     }
 
-
     main {
         background-color: rgba(20, 162, 184, 255);
     }
@@ -209,73 +208,6 @@
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     }
 
-    .list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-        grid-column-gap: 15px;
-    }
-
-    .list .items {
-        width: 310px;
-        background-color: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        outline: 0.2rem solid rgb(146, 220, 220);
-        padding: 5px;
-        margin-bottom: 20px;
-    }
-
-    .list .items img {
-        height: 280px;
-        width: 100%;
-        padding: 0 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .list .items .desc {
-        padding: 5px 20px;
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .list .items .title {
-        font-weight: 900;
-        font-size: 17px;
-        color: #424144;
-        padding: 0 20px;
-    }
-
-    .list .items .box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .list .items .box .price {
-        color: rgba(255, 95, 0, 255);
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .list .items .box .btn {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    .list .items .box .btn:hover {
-        cursor: pointer;
-        background-color: rgba(255, 95, 0, 255);
-        color: white;
-    }
-
     #closecart {
         cursor: pointer;
         margin-top: 40px;
@@ -285,6 +217,53 @@
         position: absolute;
         z-index: 1000;
     }
+
+    .btn{
+        color: rgba(255, 95, 0, 255);
+        background-color: white;
+        border: 2px solid rgba(127, 185, 182, 255);
+        border-radius: 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .price {
+        color: rgba(255, 95, 0, 255);
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+        background-color: rgba(255, 95, 0, 255);
+        color: white;
+    }
+
+    .sec{
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        outline: 0.2rem solid rgb(146, 220, 220);
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .lead{
+        color: black;
+    }
+
+    .type {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+    
+    .name{
+        font-weight: 12px;
+    }
+
+    .card-img-top {
+        padding: 0 7%;
+    }
+
 </style>
 
 <body class="">
@@ -364,10 +343,10 @@
         <section class="py-3 py-md-5">
             <div class="container">
                 <section class="content">
-                    <h1>Разом до успіху!</h1>
-                    <p>Свіжі посібники та тестові завдання для підготовки <br> до НМТ в нашому онлайн магазині.</p>
+                    <h1>Ми віримо у вас!</h1>
+                    <p>Адаптовані посібники для підготовки до НМТ <br> в нашому онлайн-магазині.</p>
                     <div class="img" style="margin-left: 670px; position: absolute;">
-                        <img src="shop.png" alt="item1" style="max-width: 300px; max-height: 300px;">
+                        <img src="kids_together.png" alt="item1" style="max-width: 290px; max-height: 290px; margin-left: 30px;">
                     </div>
 
                     <a href="#favs">
@@ -379,7 +358,7 @@
 
         <section class="container" id="favs">
             <h1 class="pheading">Наші фаворити:</h1>
-            <section class="sec">
+            <section class = "py-2">
                 <div class="list">
                 </div>
             </section>
@@ -472,81 +451,95 @@
         let products = [
             {
                 id: 1,
-                description: "Українська мова",
-                name: 'НМТ 2024. Тестові завдання у форматі НМТ 2024 - Авраменко Олександр.',
+                type: 'Українська мова',
+                name: 'Універсальний довідник (для сліпих шрифтом Брайля)',
+                description: "Цей універсальний довідник з української мови призначений для учнів закладів загальної середньої освіти, абітурієнтів, студентів та всіх, хто прагне поглибити свої знання з мови. Книга побудована відповідно до чинної навчальної програми з української мови та відповідає вимогам НМТ.",
                 image: 'book1.JPG',
                 price: 145
             },
             {
                 id: 2,
-                description: "Українська література",
-                name: 'НМТ 2024. Тестові завдання у форматі НМТ 2024. Витвицька С.',
+                type: 'Математика',
+                name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Опис книги: Цей довідник з математики розроблений спеціально для абітурієнтів та школярів, які готуються до вступних іспитів та НМТ. Посібник охоплює всі основні розділи шкільної математики, забезпечуючи глибокі знання та навички, необхідні для успішного складання іспитів.",
                 image: 'book2.JPG',
                 price: 95
             },
             {
                 id: 3,
-                description: "Англійська мова",
-                name: 'НМТ 2024. Експрес-підготовка до НМТ-2024. Ільченко В.',
+                type: 'Історія України',
+                name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Посібник адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки. Спеціальні видання з використанням сучасних технологій забезпечують зручність і доступність інформації, що допомагає у підготовці до уроків та іспитів.",
                 image: 'book3.JPG.WEBP',
                 price: 200
             },
             {
                 id: 4,
-                description: "Математика",
-                name: 'НМТ 2024. Усе для підготовки до НМТ в режимі онлайн і офлайн',
+                type: 'Українська література',
+                name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Цей довідник з української літератури створений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює ключові теми та твори української літератури, які входять до навчальної програми.",
                 image: 'book4.JPG',
                 price: 79
             },
             {
                 id: 5,
-                description: "Історія України",
-                name: 'НМТ 2024. Усе для підготовки до НМТ в режимі онлайн і офлайн.',
+                type: 'Біологія',
+                name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Цей довідник з біології розроблений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи біології, необхідні для успішного складання іспитів.",
                 image: 'book5.JPG',
                 price: 250
             },
             {
                 id: 6,
-                description: "Біологія",
-                name: 'НМТ 2024. Тестові завдання у форматі НМТ 2024. Барна І.',
+                type: 'Фізика',
+                name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Цей довідник з фізики призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи фізики, необхідні для глибокого розуміння предмету та успішного складання іспитів.",
                 image: 'book6.JPG',
                 price: 100
             },
             {
                 id: 7,
-                description: "Фізика",
-                name: 'НМТ 2024. 10 варіантів у форматі НМТ. Гайда В.Я., Гандзій Р.Я., Семенюк С.І.',
+                type: 'Хімія',
+                name: 'Хімія. Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
+                description: "Цей довідник з хімії призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи шкільної програми з хімії, забезпечуючи глибокі знання та навички, необхідні для успішного складання іспитів.",
                 image: 'book7.JPG',
                 price: 80
-            },
-            {
-                id: 8,
-                description: "Хімія",
-                name: 'НМТ 2024. Тестові завдання у форматі НМТ 2024. Березан О.',
-                image: 'book8.JPG',
-                price: 80
             }
-
         ];
 
         let listCards = [];
+
         function initApp() {
             products.forEach((value, key) => {
                 let newDiv = document.createElement('div');
                 newDiv.classList.add('item');
+
                 newDiv.innerHTML = `
-            <div class="items">
-                <div class="img"><img src="${value.image}" alt="item1"></div>
-                <div class="desc">${value.description}</div>
-                <div class="title">${value.name}</div>
-                <div class="box">
-                    <div class="price">${value.price.toLocaleString()} грн.</div>
-                    <div class="btn" onclick="addToCard(${key})">Додати в корзину</div>
+            <div class="sec">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
+                           src="${value.image}" alt="..." /></div>
+                    <div class="col-md-6">
+                      <div class="type" class="small mb-1">${value.type}</div> 
+                        <h3 class="name">${value.name}</h3>
+                        <div class="fs-5 mb-5">
+                            <span class = "price">${value.price.toLocaleString()} грн.</span>
+                        </div>
+                        <p class="lead">${value.description}</p>
+                        <div class="d-flex">
+                            <button class="btn flex-shrink-0" type="button" onclick = "addToCard(${key})">
+                                <i class="bi-cart-fill me-1"></i>
+                                Додати в корзину
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>`;
+
                 list.appendChild(newDiv);
             })
         }
+
         initApp();
         function addToCard(key) {
             if (listCards[key] == null) {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylevideo.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,161 +16,6 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<style>
-    main {
-        background-color: rgba(20, 162, 184, 255);
-    }
-
-    .pheading {
-        text-align: left;
-        margin-left: 95px;
-        padding: 30px;
-        color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-
-    h4 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: left;
-        margin-left: 120px;
-        margin-top: -20px;
-        margin-bottom: 30px;
-        width: 800px;
-        padding: 20px;
-        text-decoration: underline;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-
-    h5 {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        text-align: center;
-        position: absolute;
-        margin-left: 1000px;
-        margin-top: -90px;
-        width: 312px;
-        padding: 13px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        cursor: pointer;
-    }
-
-    .sec {
-        padding: 10px 5%;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        grid-column-gap: 15px;
-        margin-left: 50px;
-        text-align: center;
-    }
-
-    .products .card {
-        width: 350px;
-        background-color: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        outline: 0.2rem solid rgb(146, 220, 220);
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-
-    .products .card .desc {
-        padding: 5px 20px;
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .products .card .box .btn:hover {
-        cursor: pointer;
-        background-color: rgba(255, 95, 0, 255);
-        color: white;
-    }
-
-    .lessons {
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        height: 100%;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-
-    .products .card p {
-        color: rgba(255, 95, 0, 255);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        position: absolute;
-        z-index: 1;
-        margin-left: 35px;
-        margin-top: 90px;
-        background-color: white;
-        width: 80%;
-        border: 3px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-    }
-
-    .lessons:hover {
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-    }
-
-    .modal-body {
-        background-color: rgb(255, 255, 255);
-        outline: 0.9rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: rgba(255, 95, 0, 255);
-
-    }
-
-    .close {
-        color: #fff;
-    }
-
-
-    .close:hover {
-        color: rgba(20, 162, 184, 255);
-    }
-
-
-    .intro-2 {
-        font-size: 14px;
-    }
-
-    #introtxt {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        margin-left: -60px;
-    }
-
-    iframe {
-        outline: 0.5rem solid rgb(146, 220, 220);
-        border-radius: 10px;
-        margin-left: 55px;
-        margin-bottom: 70px;
-    }
-
-    .download-btn {
-        color: rgba(255, 95, 0, 255);
-        background-color: white;
-        border: 2px solid rgba(127, 185, 182, 255);
-        border-radius: 8px;
-        margin-left: -135px;
-        margin-top: 330px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        position: absolute;
-        padding: 8px 20px;
-    }
-</style>
 
 <body class="">
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -212,20 +59,20 @@
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="../website.html" class="nav-link px-2 text-info">Головна</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown"
+                            <a class="nav-link dropdown-toggle px-2 text-info" href="../studymaterials.html" id="materialsDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Матеріали</a>
                             <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                                <a class="dropdown-item" href="#">Українська мова</a>
-                                <a class="dropdown-item" href="#">Математика</a>
-                                <a class="dropdown-item" href="#">Історія України</a>
-                                <a class="dropdown-item" href="#">Українська література</a>
-                                <a class="dropdown-item" href="#">Іноземні мови</a>
-                                <a class="dropdown-item" href="#">Біологія</a>
-                                <a class="dropdown-item" href="#">Географія</a>
-                                <a class="dropdown-item" href="#">Хімія</a>
-                                <a class="dropdown-item" href="#">Фізика</a>
-
+                                <a class="dropdown-item" href="../textmaterials/ukrtopics.html">Українська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/mathtopics.html">Математика</a>
+                                <a class="dropdown-item" href="../textmaterials/historytopics.html">Історія України</a>
+                                <a class="dropdown-item" href="../textmaterials/literaturetopics.html">Українська
+                                    література</a>
+                                <a class="dropdown-item" href="../textmaterials/englishtopics.html">Англійська мова</a>
+                                <a class="dropdown-item" href="../textmaterials/biologytopics.html">Біологія</a>
+                                <a class="dropdown-item" href="../textmaterials/geographytopics.html">Географія</a>
+                                <a class="dropdown-item" href="../textmaterials/chemistrytopics.html">Хімія</a>
+                                <a class="dropdown-item" href="../textmaterials/physicstopics.html">Фізика</a>
                             </div>
                         </li>
                         <!-- <li class="nav-item dropdown">
@@ -290,43 +137,37 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr2---sn-bjo-nv4l.googlevideo.com/videoplayback?expire=1716759975&ei=R1lTZurUFKT1mLAPyJ2H-AU&ip=149.34.242.145&id=o-ABA6Ms1EY74ulnNyO2t0LgyIULAD5Z4X-LWjBddNsJEK&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=X0&mm=31%2C29&mn=sn-bjo-nv4l%2Csn-q0c7rn76&ms=au%2Crdu&mv=m&mvi=2&pcm2cms=yes&pl=23&pcm2=no&initcwndbps=1138750&bui=AWRWj2QN_IrZksLgqbErUBhxNIsAGa9QRpPOhtFQugDdRj5oc_qts5yMHQs50QXkaOV8lbDLOkqnBOnj&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4054.064&lmt=1668726201257010&mt=1716738067&fvip=3&c=MEDIA_CONNECT_FRONTEND&txp=5311224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgTYSeqFtpGRlQazJscoxqe7fiMIQPtYOFaNxnisPr28oCIQCW_SFlSh8aRD06q3K-9D7HeA-IWyL5qC941F2E5CilKg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRgIhAJBgHu_RerZqaKYH4Wnv50XLHapGRF99PpXonAWNYDO9AiEAhsDnw8Ww32A9zMnWb_nENKr0zghzs019CYhMMCxjIJc%3D&title=%D0%97%D0%9D%D0%9E-2022.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%201.%20%D0%92%D1%81%D1%82%D1%83%D0%BF.%20%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%84%D1%96%D0%B7%D0%B8%D0%BA%D0%B8%20%D1%96%20%D0%BD%D0%B5%20%D1%82%D1%96%D0%BB%D1%8C%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="physics4.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7E8dlRkGw8g?si=9vbKWcKpbO82n6Mr"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-q4fl6nsy.googlevideo.com/videoplayback?expire=1716759999&ei=XllTZpisOu2a2_gP_uqjYA&ip=5.182.110.118&id=o-AIdaj0rgOGImx2urXh_1YQs-m9pHxpR1qsPU6eaA6TL8&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=yD&mm=31%2C26&mn=sn-q4fl6nsy%2Csn-vgqsrned&ms=au%2Conr&mv=m&mvi=1&pl=24&initcwndbps=1353750&bui=AWRWj2RcrYYxq1VXHxDXG4ZUfFxSrkN66EqH4yhMXFT4RyB4lWuHWetkgjO5WqVcUxpPxf0dVDg8EfRS&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3613.071&lmt=1668669661811069&mt=1716738067&fvip=1&c=MEDIA_CONNECT_FRONTEND&txp=5311224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgT6WZZtI8ishqMaYCYcpaoTwTqaFX48GgXbKXkaRocbACIQCnsTw3e-FNXmPwCEr0XdGqn3wU0jiTHbyan__u5YhSqA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIhANUuhZ0FLw4aMtKpZ6zcpDnPRRpKKy3p6l_nXGLwsBM5AiAl4uUjXM9HEFBp_wm10SR7vVojdNi_cuIOle0DY8QFsQ%3D%3D&title=%D0%97%D0%9D%D0%9E-2022.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%205.%20%D0%A0%D0%BE%D0%B7%D0%B2%27%D1%8F%D0%B7%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87.%20%D0%A7%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0%201%3A%20%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%B8%20%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%D0%B0%20%D1%82%D0%B0%20%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%96%20%D1%81%D0%B8%D0%BB%D0%B8%20%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D1%96%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="physics1.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SNBlmiiiKZ4?si=znhZG7y0xnoeYZe9"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-uxacg0-cfo6.googlevideo.com/videoplayback?expire=1716760020&ei=dFlTZvieK9OdvcAPgr6qwAQ&ip=202.160.35.155&id=o-AMdozrOdQjA7ZR3m7BTZBcZJC4TWqNcMemzBTW91gcTL&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=-g&mm=31%2C29&mn=sn-uxacg0-cfo6%2Csn-npoe7ns7&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=718750&bui=AWRWj2QQdpktzcNSWmnRj2oSMdkAwBaTzEF8YqCnuEAFphqop7JdZx4aLX6cdVy3Cwv8-cNsS2a5GJqt&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3845.061&lmt=1668753826663987&mt=1716738067&fvip=5&c=MEDIA_CONNECT_FRONTEND&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAO4suY370vir3UfByyrD1-KUFcQHhaRt71sO2tG-uzBHAiEAzj70tAb2oJmhiZ_XvOZ193jbQC1DWHmUqubF4IiC9kk%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRAIgC_XR1CSH7SfaOMk_X-MjwTvSc_WoAZSbBkxe69ZwfJ8CIDnM9JPhRu0z22CdfKWdvO6OWdpyPAI3AHdiObyQGsMK&title=%D0%97%D0%9D%D0%9E-2022.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%2012.%20%D0%A0%D0%BE%D0%B7%D0%B2%27%D1%8F%D0%B7%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%202%3A%20%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D1%96%D0%BA%D0%B0%20%D1%82%D0%B0%20%D0%BC%D0%BE%D0%BB%D0%B5%D0%BA%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B0%20%D1%84%D1%96%D0%B7%D0%B8%D0%BA%D0%B0"
-                class="download-btn">Завантажити</a>
+            <a href="physics2.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/IeykclsXV2Q?si=MkGK8Y1rtyJKk2Dj"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-q4fl6nds.googlevideo.com/videoplayback?expire=1716760067&ei=o1lTZuXKArfOir4PnqifIA&ip=5.182.110.71&id=o-ACWH1MYWCVsdB0eBrhyArtP0c_mTnwgc35SzZeLiAEdG&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=9B&mm=31%2C29&mn=sn-q4fl6nds%2Csn-q4flrnsd&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1353750&bui=AWRWj2Ro5lBQoDE40o301kotu1HK6KIMRDXweUbcqd6NFDtvGg7s6_0XByooY_1BK69_EYg3cTdwWTE9&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=2561.695&lmt=1678783638841675&mt=1716738067&fvip=1&c=MEDIA_CONNECT_FRONTEND&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgEbQTTLCrJu3Qjz43QVqcuLrIyfrGNp7b2Oe3wzrg_ZACIQDaTufX7pCtY8wAPtpm02tOUrCmqLDlSUUdCR3GxDfizA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIhAMzFInpmUj2AfKh4Pc3cdk3KARKvsiU9_96ncgetH0w5AiAGmY0J0aZrMa3_okav_qNgVcqDyi81cpX7Rexa-ioGTQ%3D%3D&title=%D0%9D%D0%9C%D0%A2%202023.%20%D0%A4%D1%96%D0%B7%D0%B8%D0%BA%D0%B0.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%201.%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BA%D1%96%D0%BD%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8"
-                class="download-btn">Завантажити</a>
+            <a href="physics3.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TUmGEX6zhF0?si=gn_J3Db15AWKx3zE"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-aigl6nsk.googlevideo.com/videoplayback?expire=1716760087&ei=t1lTZtiSK6OLkucPrIIN&ip=185.126.75.98&id=o-AAOwq0hjV_fYtgXIWXZDUiBXyH-HWTF74MgPwaaccFu2&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=sp&mm=31%2C26&mn=sn-aigl6nsk%2Csn-ab5l6nk6&ms=au%2Conr&mv=m&mvi=1&pl=22&initcwndbps=4073750&bui=AWRWj2QiVmlsTSi24pF47ZwRLwYuNoelSgsesMpqLlQxFT-SXsXJkPFdFGw3SbFOmK747ZAdOCm2L1HJ&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3602.065&lmt=1678988304609209&mt=1716738067&fvip=4&c=MEDIA_CONNECT_FRONTEND&txp=7218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgYa8t8rCYhfC2QwPzAx8MTrqPASn603topBFb99xoNl0CIQCbjDCTVKBTpbQpH5dHFse9ItZCdJXFYVq4biCxc2BAzw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIgOqbD8jARGnWVYwf7EqQnUCRhezmtzaxtR3BlOUww9ZUCIQD1X0BxaVfTTyG5eZVXUAlgIYwzr2L7Ed0YmTM7YmniLw%3D%3D&title=%D0%9D%D0%9C%D0%A2%202023.%20%D0%A4%D1%96%D0%B7%D0%B8%D0%BA%D0%B0.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%202.%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BA%D1%96%D0%BD%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8.%20%D0%A0%D1%96%D0%B2%D0%BD%D0%BE%D0%BF%D1%80%D0%B8%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B9%20%D1%80%D1%83%D1%85"
-                class="download-btn">Завантажити</a>
+            <a href="physics6.mp4" download class="download-btn">Завантажити</a>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/XjKry_HK-HY?si=vaFHeWSXshcNxYUp"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="https://rr1---sn-q4flrnl6.googlevideo.com/videoplayback?expire=1716760110&ei=zllTZo-aD-Py0_wPje-tiAM&ip=181.215.182.57&id=o-AIU_ckBPiT-XFoiW5Zb0FAxj07CIW5kug0v9lUcL0Ey-&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=4a&mm=31%2C26&mn=sn-q4flrnl6%2Csn-vgqsknek&ms=au%2Conr&mv=m&mvi=1&pl=24&initcwndbps=502500&bui=AWRWj2QGT7z7pV6y1kqeMzWYMuFQxftDsySg9qr_Py7pnfWLmXWH23VQ_Yi7R9dUX2ZdYsbIbgnfeh61&vprv=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=3600.555&lmt=1683686175252397&mt=1716738067&fvip=5&c=MEDIA_CONNECT_FRONTEND&txp=7218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAIt0qAk962l5DT7MRziBM1w0ky2oZ14c2ttZnrg1FkEiAiAZKn6ipYhIHkLdHKUEOJSxQNxqbr6BtkqqpBSywpVr2A%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHWaYeowRQIgOJ44sBT1LQcnv64pJC7fqVAwmNUjVmkenaEg0n9If9cCIQDjgRsIvrx2-lvPjqk0DnvacptUnCfxe5OYoueJnlO3fA%3D%3D&title=%D0%9D%D0%9C%D0%A2-2023.%20%D0%A4%D1%96%D0%B7%D0%B8%D0%BA%D0%B0.%20%D0%92%D0%B5%D0%B1%D1%96%D0%BD%D0%B0%D1%80%2012.%20%D0%9F%D0%BE%D1%81%D1%82%D1%96%D0%B9%D0%BD%D0%B8%D0%B9%20%D1%81%D1%82%D1%80%D1%83%D0%BC.%20%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%9E%D0%BC%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D1%96%D0%BB%D1%8F%D0%BD%D0%BA%D0%B8%20%D0%BA%D0%BE%D0%BB%D0%B0"
-                class="download-btn">Завантажити</a>
+            <a href="physics5.mp4" download class="download-btn">Завантажити</a>
         </section>
     </main>
 
