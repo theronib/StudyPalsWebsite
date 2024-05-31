@@ -1,7 +1,13 @@
 <title>Welcome to my forum | Add your question</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 	<style>
 
 
@@ -69,7 +75,7 @@ h3{
 	justify-content: space-around;
 }
 
-#submit{
+#search-btn{
 	color: rgba(255, 95, 0, 255);
     background-color: white;
     border: 2px solid rgba(127, 185, 182, 255);
@@ -81,6 +87,107 @@ h3{
     outline: none;
     box-shadow: none;
 }
+
+#search-btn{
+  position: static; 
+  margin-left: 370px; 
+  margin-top: -90px;
+  margin-bottom: 40px;
+}
+
+#form1{
+  display: inline-flex;
+  gap: 20px;
+  margin-left: -70px;
+  padding: 20px;
+}
+
+.mt-4{
+  color: white;
+  font-size: 17px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#subject{
+  color: rgba(255, 95, 0, 255);
+  font-weight: bold;
+}
+
+.btn{
+  color: rgba(255, 95, 0, 255);
+        background-color: white;
+        border: 2px solid rgba(127, 185, 182, 255);
+        border-radius: 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn:hover {
+        cursor: pointer;
+        background-color: rgba(255, 95, 0, 255);
+        color: white;
+    }
+
+    #price{
+        color: rgba(255, 95, 0, 255);
+        font-weight: bold;
+    }
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  color: rgba(255, 95, 0, 255);
+    background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h5{
+  text-decoration: underline;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#confirmButton{
+  color: rgba(255, 95, 0, 255);
+  cursor: pointer;
+    background-color: white;
+    border: 2px solid rgba(127, 185, 182, 255);
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#confirmButton:hover {
+        cursor: pointer;
+        background-color: rgba(255, 95, 0, 255);
+        color: white;
+    }
+
 
 		</style>
 
@@ -109,16 +216,7 @@ h3{
                                 <a class="dropdown-item" href="textmaterials/physicstopics.html">Фізика</a>
                             </div>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Медіа</a>
-              <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                <a class="dropdown-item" href="video.html">Відеоуроки</a>
-                <a class="dropdown-item" href="#">Аудіоуроки</a>
-               
-
-              </div>
-            </li> -->
-
+        
             <li><a href="video.html" class="nav-link px-2 text-info">Медіа</a></li>
 
 
@@ -161,36 +259,104 @@ h3{
 <br/><br/>
 
 <div class="wrapper" style = 'background: rgba(20,162,184,255); margin-top: -48px;'>
-<form method="POST" style = "margin-left: -75px;">
-	<input type="text" class="form-control" placeholder="Введіть своє питання" name="question" style = "margin-top: 25px; margin-left: -10px;">
-	<input type="submit" class="btn" id = "submit" value="Опублікувати" style = "margin-left: 210px; margin-top: -40px; position: absolute;">
+<p class = "mt-4">Щоб знайти додатковий урок, будь ласка, оберіть предмет або виберіть дату.</p>
+<form action = "" method = "GET" id = "form1">
+    <select class="form-control" id="formcontrol">
+      <option>Українська мова</option>
+      <option>Математика</option>
+      <option>Історія України</option>
+      <option>Українська література</option>
+      <option>Англійська мова</option>
+      <option>Біологія</option>
+      <option>Географія</option>
+      <option>Хімія</option>
+      <option>Фізика</option>
+    </select>
+
+  
+    <section class="container">
+        <form>
+        <div class="row form-group">
+    <div>
+        <div class="input-group date" id="datepicker">
+        <input type="date" id = "datepicker" name = "date" class="form-control">
+            <span class="input-group-append">
+                <span class="input-group-text bg-white">
+                    <i class="fa fa-calendar"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+        </form>
+    </section>
+	<input type="submit" class="btn" id = "search-btn" value="Знайти">
 </form>
 
+<h3>Доступні уроки:</h3>
 
-<h3>Анонімні теми:</h3>
+
 
 <?php
 $host = 'localhost';
-
 $username = 'root';
-
 $password = '';
-
-$database = 'Forum';
-
-
+$database = 'Lessons';
 $database_connection = mysqli_connect($host, $username, $password, $database);
 
-$questions_query = "SELECT * FROM `question`";
-$questions_result = mysqli_query($database_connection, $questions_query);
 
-while ($question_data = mysqli_fetch_assoc($questions_result)) {
-    $question = $question_data['question'];
-    $id = $question_data['id'];
-    echo "<div class='single-question'>
-	<b><a href='question.php?id=$id' onClick=\"window.open('question.php?id=$id','pagename','resizable,height=800,width=450'); return false;\" style='cursor: pointer; text-decoration: none;'>$question</a></b>
-    </div>";
+$lessons_query = "SELECT * FROM `Lessons`";
+$lessons_result = mysqli_query($database_connection, $lessons_query);
+
+while ($lesson_data = mysqli_fetch_assoc($lessons_result)) {
+    $Lessons = $lesson_data['Lessons'];
+    $id = $lesson_data['LessonID'];
+    $subject = $lesson_data['SubjectName'];
+
+$date = $lesson_data['LessonDate'];
+    $time = date('H:i', strtotime($lesson_data['LessonTime']));
+    $teacher = $lesson_data['TeacherName'];
+    $price = $lesson_data['Price'];
+
+    $teacheremail = $lesson_data['TeacherEmail'];
+    $teacherphone = $lesson_data['TeacherPhone'];
+
+
+echo "<div class='single-question'>
+<h4 id = 'id' style = 'display: none'>$id</h4>
+<h4 id = 'subject'>$subject</h4>
+<div style = 'display: inline-flex; gap: 6px;'> 
+<p>Дата: </p>
+<p class='date'>$date.</p>
+<p id='time'>Час: $time</p>
+</div>
+<p id = 'teacherName'>Вчитель: $teacher</p>
+<p id = 'teacherPhone' style = 'display: none'>Номер телефона: $teachephone</p>
+<p id = 'teacherEmail' style = 'display: none'>Почта: $teacheremail</p>
+<div style = 'display: inline-flex; gap: 6px;'> 
+<p>Ціна: </p>
+<p id = 'price'>$price</p>
+<p>грн.
+</div>
+<br>
+<div class='btn' onclick='confirmLesson(this)'>Забронювати урок</div>
+</div>
+
+<div id='myModal' class='modal'>
+  <div class='modal-content'>
+    <span class='close'>&times;</span>
+    <h5>Інформація про додатковий урок: </h5>
+    <p id='modal-content'></p>
+    <button id='confirmButton'>Підтвердити бронювання</button>
+  </div>
+</div>
+";
+
+
+
 }
+
 ?>
 
 </div>
@@ -231,17 +397,81 @@ while ($question_data = mysqli_fetch_assoc($questions_result)) {
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-    crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#formcontrol').on('change', function () {
+            search_div($(this).val());
+        });
+    });
+
+    function search_div(value) {
+        $('.single-question').each(function() {
+            var found = false;
+            $(this).each(function() {
+                if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                    found = true;
+                }
+            });
+            if (found) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#search-btn').on('click', function(e) {
+            e.preventDefault();
+            var selectedDate = $('input[name="date"]').val(); 
+            console.log(selectedDate); 
+            search_by_date(selectedDate); 
+        });
+    });
+
+    function search_by_date(selectedDate) {
+        $('.single-question').each(function() {
+            var date = $(this).find('.date').text().trim(); 
+            date = date.replace('.', '');
+            if (date === selectedDate) { 
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+</script>
+
+<script>
+
+  function confirmLesson(btn) {
+  var questionContainer = btn.closest('.single-question');
+
+  var id = questionContainer.querySelector('#id').textContent;
+  var subject = questionContainer.querySelector('#subject').textContent;
+  var price = questionContainer.querySelector('#price').textContent;
+
+  var modal = document.getElementById("myModal");
+  var modalContent = document.getElementById("modal-content");
+  modalContent.innerHTML = id + ". Предмет: " + subject + ". " + "Ціна: " + price + " грн. " + "<br>Підтверджуєте бронювання?";
+  modal.style.display = "block";
+
+  var closeButton = document.getElementsByClassName("close")[0];
+  closeButton.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  var confirmButton = document.getElementById("confirmButton");
+  confirmButton.onclick = function() {
+    event.preventDefault();
 
 
-    <script>
-      
-    </script>
+let paymentURL = "lessonpayment.php?id=" + id;
+window.location.href = paymentURL;
+  }
+}
+
+</script>

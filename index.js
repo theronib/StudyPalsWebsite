@@ -218,8 +218,14 @@ window.onload = function () {
                     ]
                 },
                 { href: 'index.html', text: 'Чат', class: 'text-info' },
-                { href: '#', text: 'Додаткові уроки', class: 'text-info' },
-                { href: 'store.html', text: 'Магазин', class: 'text-info' },
+                { href: 'additionallesson.php', text: 'Додаткові уроки', class: 'text-info' },
+
+                {
+                    href: '#', text: 'Магазин', class: 'text-info', dropdown: [
+                        { href: 'store.html', text: 'Звичайний' },
+                        { href: 'shopfordisabled.html', text: 'Для людей з обмеженими можливостями' },
+                    ]
+                }
             ];
 
             navItems.forEach(item => {

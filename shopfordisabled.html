@@ -218,7 +218,7 @@
         z-index: 1000;
     }
 
-    .btn{
+    .btn {
         color: rgba(255, 95, 0, 255);
         background-color: white;
         border: 2px solid rgba(127, 185, 182, 255);
@@ -238,7 +238,7 @@
         color: white;
     }
 
-    .sec{
+    .sec {
         background-color: white;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
@@ -247,23 +247,24 @@
         margin-bottom: 30px;
     }
 
-    .lead{
+    .lead {
         color: black;
+        font-size: 16px;
     }
 
     .type {
         text-decoration: underline;
         font-size: 18px;
     }
-    
-    .name{
+
+    .name {
         font-weight: 12px;
     }
 
     .card-img-top {
         padding: 0 7%;
+        transition: 0.5s;
     }
-
 </style>
 
 <body class="">
@@ -321,8 +322,14 @@
                         </li>
 
                         <li><a href="index.html" class="nav-link px-2 text-info">Чат</a></li>
-                        <li><a href="#" class="nav-link px-2 text-info">Додаткові уроки</a></li>
-                        <li><a href="store.html" class="nav-link px-2 text-info">Магазин</a></li>
+                        <li><a href="additionallesson.php" class="nav-link px-2 text-info">Додаткові уроки</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Магазин</a>
+                            <div class="dropdown-menu" aria-labelledby="materialsDropdown">
+                              <a class="dropdown-item" href="store.html">Звичайний</a>
+                              <a class="dropdown-item" href="shopfordisabled.html">Для людей з обмеженими можливостями</a>
+                            </div>
+                          </li>
 
                         <div class="shopping">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" id="cart"
@@ -346,7 +353,8 @@
                     <h1>Ми віримо у вас!</h1>
                     <p>Адаптовані посібники для підготовки до НМТ <br> в нашому онлайн-магазині.</p>
                     <div class="img" style="margin-left: 670px; position: absolute;">
-                        <img src="kids_together.png" alt="item1" style="max-width: 290px; max-height: 290px; margin-left: 30px;">
+                        <img src="kids_together.png" alt="item1"
+                            style="max-width: 290px; max-height: 290px; margin-left: 30px;">
                     </div>
 
                     <a href="#favs">
@@ -358,7 +366,7 @@
 
         <section class="container" id="favs">
             <h1 class="pheading">Наші фаворити:</h1>
-            <section class = "py-2">
+            <section class="py-2">
                 <div class="list">
                 </div>
             </section>
@@ -453,56 +461,63 @@
                 id: 1,
                 type: 'Українська мова',
                 name: 'Універсальний довідник (для сліпих шрифтом Брайля)',
-                description: "Цей універсальний довідник з української мови призначений для учнів закладів загальної середньої освіти, абітурієнтів, студентів та всіх, хто прагне поглибити свої знання з мови. Книга побудована відповідно до чинної навчальної програми з української мови та відповідає вимогам НМТ.",
-                image: 'book1.JPG',
-                price: 145
+                description: "Цей універсальний довідник з української мови призначений для учнів закладів загальної середньої освіти, абітурієнтів, студентів та всіх, хто прагне поглибити свої знання з мови. Книга побудована відповідно до чинної навчальної програми з української мови та відповідає вимогам НМТ. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book1_special.JPG',
+                image_detailed: 'ukr_special_open.png',
+                price: 87
             },
             {
                 id: 2,
                 type: 'Математика',
                 name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Опис книги: Цей довідник з математики розроблений спеціально для абітурієнтів та школярів, які готуються до вступних іспитів та НМТ. Посібник охоплює всі основні розділи шкільної математики, забезпечуючи глибокі знання та навички, необхідні для успішного складання іспитів.",
-                image: 'book2.JPG',
+                description: "Цей довідник з математики розроблений спеціально для абітурієнтів та школярів, які готуються до вступних іспитів та НМТ. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book3_special.JPG',
+                image_detailed: 'math_special_open.png',
                 price: 95
             },
             {
                 id: 3,
                 type: 'Історія України',
                 name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Посібник адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки. Спеціальні видання з використанням сучасних технологій забезпечують зручність і доступність інформації, що допомагає у підготовці до уроків та іспитів.",
-                image: 'book3.JPG.WEBP',
-                price: 200
+                description: "Цей довідник з історії України розроблений спеціально для абітурієнтів та школярів, які готуються до вступних іспитів та НМТ. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book4_special.JPG',
+                image_detailed: 'history_special_open.png',
+                price: 110
             },
             {
                 id: 4,
                 type: 'Українська література',
                 name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Цей довідник з української літератури створений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює ключові теми та твори української літератури, які входять до навчальної програми.",
-                image: 'book4.JPG',
-                price: 79
+                description: "Цей довідник з української літератури створений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює ключові теми та твори української літератури, які входять до навчальної програми. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book2_special.JPG',
+                image_detailed: 'literature_special_open.png',
+                price: 74
             },
             {
                 id: 5,
                 type: 'Біологія',
                 name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Цей довідник з біології розроблений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи біології, необхідні для успішного складання іспитів.",
-                image: 'book5.JPG',
-                price: 250
+                description: "Цей довідник з біології розроблений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи біології, необхідні для успішного складання іспитів. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book5_special.JPG',
+                image_detailed: 'biology_special_open.png',
+                price: 50
             },
             {
                 id: 6,
                 type: 'Фізика',
                 name: 'Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Цей довідник з фізики призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи фізики, необхідні для глибокого розуміння предмету та успішного складання іспитів.",
-                image: 'book6.JPG',
-                price: 100
+                description: "Цей довідник з фізики призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи фізики, необхідні для глибокого розуміння предмету та успішного складання іспитів. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book6_special.JPG',
+                image_detailed: 'physics_special_open.png',
+                price: 60
             },
             {
                 id: 7,
                 type: 'Хімія',
                 name: 'Хімія. Довідник для абітурієнтів та школярів (для сліпих шрифтом Брайля)',
-                description: "Цей довідник з хімії призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. Посібник охоплює основні розділи шкільної програми з хімії, забезпечуючи глибокі знання та навички, необхідні для успішного складання іспитів.",
-                image: 'book7.JPG',
+                description: "Цей довідник з хімії призначений для учнів закладів загальної середньої освіти та абітурієнтів, які готуються до вступних іспитів та НМТ. <br> <u> Посібник також адаптовано для сліпих та слабозорих людей. Він доступний у форматі Брайля, що дозволяє людям з вадами зору повноцінно користуватися матеріалами для підготовки.</u>",
+                image: 'book7_special.JPG',
+                image_detailed: 'chemistry_special_open.png',
                 price: 80
             }
         ];
@@ -515,10 +530,38 @@
                 newDiv.classList.add('item');
 
                 newDiv.innerHTML = `
+                <style>
+
+                    .card-img-top {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.detailed-img {
+    margin-top: 30px;
+    margin-left: -510px;
+    width: 500px;
+    height: 350px;
+    padding: 35px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease;
+
+}
+
+.detailed-img.active {
+    opacity: 1;
+}
+
+
+    </style>
             <div class="sec">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                           src="${value.image}" alt="..." /></div>
+                    <div class="col-md-6">
+    <img class="card-img-top mb-5 mb-md-0" src="${value.image}" alt="..." />
+    <img class="detailed-img mb-5 mb-md-0" src="${value.image_detailed}" alt="..." />
+</div>
+
                     <div class="col-md-6">
                       <div class="type" class="small mb-1">${value.type}</div> 
                         <h3 class="name">${value.name}</h3>
@@ -595,6 +638,20 @@
             let paymentURL = "payment.html?total=" + totalPrice;
             window.location.href = paymentURL;
         }
+    </script>
+
+    <script>
+        document.querySelectorAll('.detailed-img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.classList.add('active');
+                img.previousElementSibling.style.opacity = '0';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.classList.remove('active');
+                img.previousElementSibling.style.opacity = '1';
+            });
+        });
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
