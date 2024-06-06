@@ -201,7 +201,7 @@ window.onload = function () {
                         { href: 'textmaterials/mathtopics.html', text: 'Математика' },
                         { href: 'textmaterials/historytopics.html', text: 'Історія України' },
                         { href: 'textmaterials/literaturetopics.html', text: 'Українська література' },
-                        { href: 'textmaterials/englishtopics.html', text: 'Іноземні мови' },
+                        { href: 'textmaterials/englishtopics.html', text: 'Англійська мова' },
                         { href: 'textmaterials/biologytopics.html', text: 'Біологія' },
                         { href: 'textmaterials/geographytopics.html', text: 'Географія' },
                         { href: 'textmaterials/chemistrytopics.html', text: 'Хімія' },
@@ -213,17 +213,17 @@ window.onload = function () {
 
                 {
                     href: '#', text: 'Форум', class: 'text-info', dropdown: [
-                        { href: '#', text: 'Звичайний форум' },
+                        { href: 'forum/index.php', text: 'Звичайний форум' },
                         { href: 'index.php', text: 'Анонімний форум' },
                     ]
                 },
-                { href: 'index.html', text: 'Чат', class: 'text-info' },
+                { href: 'https://studypalschat.netlify.app', text: 'Чат', class: 'text-info' },
                 { href: 'additionallesson.php', text: 'Додаткові уроки', class: 'text-info' },
 
                 {
                     href: '#', text: 'Магазин', class: 'text-info', dropdown: [
-                        { href: 'store.html', text: 'Звичайний' },
-                        { href: 'shopfordisabled.html', text: 'Для людей з обмеженими можливостями' },
+                        { href: 'shopregular.php', text: 'Звичайний' },
+                        { href: 'shopfordisabled.php', text: 'Для людей з обмеженими можливостями' },
                     ]
                 }
             ];
