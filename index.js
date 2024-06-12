@@ -213,7 +213,7 @@ window.onload = function () {
 
                 {
                     href: '#', text: 'Форум', class: 'text-info', dropdown: [
-                        { href: 'forum/index.php', text: 'Звичайний форум' },
+                        { href: 'forum_updated/index.php', text: 'Звичайний форум' },
                         { href: 'index.php', text: 'Анонімний форум' },
                     ]
                 },
@@ -441,7 +441,6 @@ window.onload = function () {
         save_name(name) {
             localStorage.setItem('name', name);
 
-            // Add the user to the list of users if not already present
             db.ref('users/').once('value', function (users_object) {
                 if (!users_object.hasChild(name)) {
                     db.ref('users/' + name).set(true);

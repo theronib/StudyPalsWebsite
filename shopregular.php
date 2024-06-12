@@ -1,4 +1,4 @@
-<title>Welcome to my forum | Add your question</title>
+<title>StudyPals Shop</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -482,42 +482,42 @@ h5{
     <header class="p-3 text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="website.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <a href="website.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <img src="logo.png" alt="mdo" width="180" height="140">
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="website.html" class="nav-link px-2 text-info">Головна</a></li>
+            <li><a href="website.php" class="nav-link px-2 text-info">Головна</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Матеріали</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                                <a class="dropdown-item" href="textmaterials/ukrtopics.html">Українська мова</a>
-                                <a class="dropdown-item" href="textmaterials/mathtopics.html">Математика</a>
-                                <a class="dropdown-item" href="textmaterials/historytopics.html">Історія України</a>
-                                <a class="dropdown-item" href="textmaterials/literaturetopics.html">Українська
+                                <a class="dropdown-item" href="textmaterials/ukrtopics.php">Українська мова</a>
+                                <a class="dropdown-item" href="textmaterials/mathtopics.php">Математика</a>
+                                <a class="dropdown-item" href="textmaterials/historytopics.php">Історія України</a>
+                                <a class="dropdown-item" href="textmaterials/literaturetopics.php">Українська
                                     література</a>
-                                <a class="dropdown-item" href="textmaterials/englishtopics.html">Англійська мова</a>
-                                <a class="dropdown-item" href="textmaterials/biologytopics.html">Біологія</a>
-                                <a class="dropdown-item" href="textmaterials/geographytopics.html">Географія</a>
-                                <a class="dropdown-item" href="textmaterials/chemistrytopics.html">Хімія</a>
-                                <a class="dropdown-item" href="textmaterials/physicstopics.html">Фізика</a>
+                                <a class="dropdown-item" href="textmaterials/englishtopics.php">Англійська мова</a>
+                                <a class="dropdown-item" href="textmaterials/biologytopics.php">Біологія</a>
+                                <a class="dropdown-item" href="textmaterials/geographytopics.php">Географія</a>
+                                <a class="dropdown-item" href="textmaterials/chemistrytopics.php">Хімія</a>
+                                <a class="dropdown-item" href="textmaterials/physicstopics.php">Фізика</a>
                             </div>
             </li>
         
-            <li><a href="video.html" class="nav-link px-2 text-info">Медіа</a></li>
+            <li><a href="video.php" class="nav-link px-2 text-info">Медіа</a></li>
 
 
              <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Форум</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                <a class="dropdown-item" href="forum/index.php">Основний форум</a>
+                <a class="dropdown-item" href="forum_updated/index.php">Основний форум</a>
                 <a class="dropdown-item" href="index.php">Анонімний форум</a>
               
               </div>
             </li>
 
             <li><a href="https://studypalschat.netlify.app" class="nav-link px-2 text-info">Чат</a></li>
-            <li><a href="#" class="nav-link px-2 text-info">Додаткові уроки</a></li>
+            <li><a href="additionallesson.php" class="nav-link px-2 text-info">Додаткові уроки</a></li>
             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Магазин</a>
                             <div class="dropdown-menu" aria-labelledby="materialsDropdown">
@@ -635,8 +635,8 @@ while ($book_data = mysqli_fetch_assoc($book_result)) {
     
 <footer>
         <ul class="nav mt-3">
-          <li class="nav-item"><a href="help.html" class="nav-link px-2 text-info">Допомога</a></li>
-          <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-info">Про нас</a></li>
+        <li class="nav-item"><a href="help.php" class="nav-link px-2 text-info">Допомога</a></li>
+        <li class="nav-item"><a href="aboutus.php" class="nav-link px-2 text-info">Про нас</a></li>
         </ul>
     <div class="container mb-1">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

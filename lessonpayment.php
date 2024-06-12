@@ -227,7 +227,7 @@ h5{
 <body>
     <div class="container">
         <div>
-            <img src="logo.png" class="img_logo" alt="Sample image">
+            <img src="logo.png" class="img_logo" alt="Sample image" onclick="location.href='website.php';" style = "cursor: pointer">
         </div>
         <form method='POST'>
             <div class="row">

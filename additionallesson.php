@@ -1,4 +1,8 @@
-<title>Welcome to my forum | Add your question</title>
+<?php
+session_start();
+?>
+
+<title>StudyPals - Бронювання уроку</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -12,13 +16,18 @@
 
 
 
-.text-end button {
+.text-end .btn {
     color: rgba(255, 95, 0, 255);
     background-color: white;
     border: 2px solid rgba(127, 185, 182, 255);
     border-radius: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 10px;
+}
+
+
+.text-end #button3 {
+    margin-left: 58px;
 }
 
 .text-end #button1 {
@@ -140,7 +149,6 @@ h3{
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
 }
@@ -188,6 +196,31 @@ h5{
         color: white;
     }
 
+    #confirmLoginButton, #confirmSignUpButton{
+  color: rgba(255, 95, 0, 255);
+  width: 50%;
+  padding: 10px 19px;
+  margin-top: 40px;
+  font-size: 16px;
+    background-color: white;
+    border: 2px solid rgba(127, 185, 182, 255);
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#confirmLoginButton:hover, #confirmSignUpButton:hover {
+        cursor: pointer;
+        background-color: rgba(255, 95, 0, 255);
+        color: white;
+    }
+
+  .modal #disclaimer{
+    margin-top: 60px; 
+    padding: 40px;
+
+  }
+
+
 
 		</style>
 
@@ -195,35 +228,35 @@ h5{
     <header class="p-3 text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="website.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <a href="website.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <img src="logo.png" alt="mdo" width="180" height="140">
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="website.html" class="nav-link px-2 text-info">Головна</a></li>
+            <li><a href="website.php" class="nav-link px-2 text-info">Головна</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Матеріали</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                                <a class="dropdown-item" href="textmaterials/ukrtopics.html">Українська мова</a>
-                                <a class="dropdown-item" href="textmaterials/mathtopics.html">Математика</a>
-                                <a class="dropdown-item" href="textmaterials/historytopics.html">Історія України</a>
-                                <a class="dropdown-item" href="textmaterials/literaturetopics.html">Українська
+                               <a class="dropdown-item" href="textmaterials/ukrtopics.php">Українська мова</a>
+                                <a class="dropdown-item" href="textmaterials/mathtopics.php">Математика</a>
+                                <a class="dropdown-item" href="textmaterials/historytopics.php">Історія України</a>
+                                <a class="dropdown-item" href="textmaterials/literaturetopics.php">Українська
                                     література</a>
-                                <a class="dropdown-item" href="textmaterials/englishtopics.html">Англійська мова</a>
-                                <a class="dropdown-item" href="textmaterials/biologytopics.html">Біологія</a>
-                                <a class="dropdown-item" href="textmaterials/geographytopics.html">Географія</a>
-                                <a class="dropdown-item" href="textmaterials/chemistrytopics.html">Хімія</a>
-                                <a class="dropdown-item" href="textmaterials/physicstopics.html">Фізика</a>
+                                <a class="dropdown-item" href="textmaterials/englishtopics.php">Англійська мова</a>
+                                <a class="dropdown-item" href="textmaterials/biologytopics.php">Біологія</a>
+                                <a class="dropdown-item" href="textmaterials/geographytopics.php">Географія</a>
+                                <a class="dropdown-item" href="textmaterials/chemistrytopics.php">Хімія</a>
+                                <a class="dropdown-item" href="textmaterials/physicstopics.php">Фізика</a>
                             </div>
             </li>
         
-            <li><a href="video.html" class="nav-link px-2 text-info">Медіа</a></li>
+            <li><a href="video.php" class="nav-link px-2 text-info">Медіа</a></li>
 
 
              <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle px-2 text-info" href="#" id="materialsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Форум</a>
               <div class="dropdown-menu" aria-labelledby="materialsDropdown">
-                <a class="dropdown-item" href="#">Основний форум</a>
+                <a class="dropdown-item" href="forum_updated/index.php">Основний форум</a>
                 <a class="dropdown-item" href="index.php">Анонімний форум</a>
               
               </div>
@@ -242,14 +275,45 @@ h5{
 
           </ul>
 
-		  <div class="text-end">
-            <a href = "login.html">
-              <button type="button" class="btn" id="button1">Логін</button>
-            </a>
-            <a href = "register.html">
-            <button type="button" class="btn">Реєстрація</button>
-          </a>
-          </div>
+          <?php
+if(isset($_SESSION['username'])) {
+  echo '<div class="text-end">';
+  if ($_SESSION['role'] === 'Викладач') {
+      echo '<a href="account/dashboard_teacher.php" class="btn" id="button3">Мій особистий кабінет</a>';
+  } else {
+      echo '<a href="account/dashboard.php" class="btn" id="button3">Мій особистий кабінет</a>';
+  }
+  echo '</div>';
+} else {
+    echo "
+        <div id='myModal' class='modal'>
+            <div class='modal-content' id = 'disclaimer'>
+                <h2>УПС...</h2>
+                <p id='modal-content'>Щоб отримати повний доступ до контенту та функціоналу сайту, будь ласка, авторизуйтесь у свій обліковий запис або зареєструйтеся. <br><br>  Це дозволить вам отримувати доступ до цікавого та корисного контенту, а також використовувати усі функції сайту.</p>
+                <button id='confirmLoginButton'>Логін</button>
+                <button id='confirmSignUpButton'>Реєстрація</button>
+                <br><br><br>
+                <p>© 2024 StudyPals, Inc. All rights reserved.</p>
+            </div>
+        </div>
+
+        <script>
+        var modal = document.getElementById('myModal');
+        modal.style.display = 'block';
+
+        document.getElementById('confirmLoginButton').onclick = function() {
+            window.location.href = 'account/login.php';
+        };
+
+        document.getElementById('confirmSignUpButton').onclick = function() {
+            window.location.href = 'register.php';
+        };
+
+
+        </script>
+        ";
+}
+?>
 
          
         </div>
@@ -363,8 +427,8 @@ echo "<div class='single-question'>
 
 <footer>
         <ul class="nav mt-3">
-          <li class="nav-item"><a href="help.html" class="nav-link px-2 text-info">Допомога</a></li>
-          <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-info">Про нас</a></li>
+        <li class="nav-item"><a href="help.php" class="nav-link px-2 text-info">Допомога</a></li>
+        <li class="nav-item"><a href="aboutus.php" class="nav-link px-2 text-info">Про нас</a></li>
         </ul>
     <div class="container mb-1">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
